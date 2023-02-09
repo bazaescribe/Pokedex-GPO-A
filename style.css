@@ -1,0 +1,81 @@
+/* 
+
+Tipos de selectores
+
+NADA - Selector natural, se aplica a las etiquetas html 
+
+. - Selector de clase, sirve para aplicarse a un grupo de elementos
+
+# - Selector de id, sirve para aplicarse a un elemento en específico
+
+*/
+
+body{
+    background-color: cadetblue;
+    margin: 0rem;
+    padding: 0rem;
+    font-family: sans-serif;
+}
+
+.navigation{
+    background-color: aquamarine; 
+    padding: 1rem; 
+}
+
+.pokemon-list{
+    background-color: fuchsia; 
+    padding: 1rem; 
+}
+
+.footer{
+    background-color: yellow; 
+    padding: 1rem; 
+}
+
+ul{
+    list-style: none;
+    padding: 0rem;
+}
+
+/* Estilos para las tarjetas de pokemon */
+
+.pokemon{
+    background-color: white;
+    height: 31.8rem;
+    width: 21.12rem;
+    margin-bottom: 1rem;
+}
+
+.pokemon .photo{
+    overflow: hidden;
+    height: 18.75rem;
+}
+
+.pokemon .photo img{
+    height: 100%;
+}
+
+.pokemon .info{
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
