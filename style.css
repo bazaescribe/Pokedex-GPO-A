@@ -8,6 +8,10 @@ NADA - Selector natural, se aplica a las etiquetas html
 
 # - Selector de id, sirve para aplicarse a un elemento en específico
 
+Selectores de estado
+
+Se agregan a un selector normal
+
 */
 
 body{
@@ -18,32 +22,53 @@ body{
 }
 
 .navigation{
-    background-color: aquamarine; 
     padding: 1rem; 
-}
-
-.pokemon-list{
-    background-color: fuchsia; 
-    padding: 1rem; 
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    /* Esta propiedad es para evitar que el div crezca a partir del padding */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(32px)
 }
 
 .footer{
-    background-color: yellow; 
+    background-color: #E1E1E8; 
     padding: 1rem; 
+    display: flex;
 }
 
-ul{
+.footer ul{
     list-style: none;
     padding: 0rem;
+    margin-right: 1rem;
 }
 
 /* Estilos para las tarjetas de pokemon */
+
+.pokemon-list{
+    background-color: #FFFFFF; 
+    padding: 1rem; 
+    padding-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .pokemon{
     background-color: white;
     height: 31.8rem;
     width: 21.12rem;
     margin-bottom: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 300ms ease all;
+}
+
+.pokemon:hover{
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
 }
 
 .pokemon .photo{
