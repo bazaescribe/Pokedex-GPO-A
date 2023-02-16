@@ -1,3 +1,38 @@
+:root{
+    --color-variante: #FFF;
+
+    --brand-main-50: #FFD390;
+    --brand-main-100: #FF9900;
+    --brand-main-200: #B26B00;
+
+    --brand-secondary-100: #00D1FF;
+    --brand-secondary-200: #00758E;
+
+    --neutral-solid-100: #000000;
+    --neutral-solid-50: #888888;
+    --neutral-solid-0: #FFFFFF;
+
+    --neutral-alpha-light-10: rgba(255, 255, 255, 0.1);
+    --neutral-alpha-light-20: rgba(255, 255, 255, 0.2);
+    --neutral-alpha-light-40: rgba(255, 255, 255, 0.4);
+
+    --neutral-alpha-transparent: rgba(0, 0, 0, 0);
+
+    --neutral-alpha-dark-10: rgba(0, 0, 0, 0.1);
+    --neutral-alpha-dark-20: rgba(0, 0, 0, 0.2);
+    --neutral-alpha-dark-10: rgba(0, 0, 0, 0.4);
+
+
+    /* guardar los colores neutrales, neutrales con transparencia y de estado como variables */
+
+    --type-normal: #A6A6A6;
+    --type-electric: #F1FF53;
+    --type-venom: linear-gradient(90deg, #C853FF, #7105A4);
+    --type-water: #0096C6;
+    --type-fire: #FF7337;
+}
+
+
 /* 
 
 Tipos de selectores
@@ -21,6 +56,22 @@ body{
     font-family: sans-serif;
 }
 
+h1{ font-size: 6rem; }
+
+h2{ font-size: 4rem; }
+
+h3 { font-size: 3rem; }
+
+h4{ font-size: 2rem; }
+
+h5{ font-size: 1.5rem; }
+
+h6{ font-size: 1.25rem; }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0rem;
+}
+
 .navigation{
     padding: 1rem; 
     display: flex;
@@ -30,7 +81,8 @@ body{
     box-sizing: border-box;
     /* Esta propiedad es para evitar que el div crezca a partir del padding */
     background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(32px)
+    backdrop-filter: blur(32px);
+    z-index: 2;
 }
 
 .footer{
@@ -71,6 +123,8 @@ body{
     box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
 }
 
+/* Aqui están los elementos de la seccion PHOTO del pokemon */
+
 .pokemon .photo{
     overflow: hidden;
     height: 18.75rem;
@@ -78,12 +132,80 @@ body{
 
 .pokemon .photo img{
     height: 100%;
+    position: relative;
+    top: -5rem;
+}
+
+.action-bar{
+    background-image: linear-gradient(var(--neutral-solid-100), var(--neutral-alpha-transparent));
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.action{
+    background: var(--neutral-alpha-light-40);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    color: var(--neutral-solid-0);
 }
 
 .pokemon .info{
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
+.pokemon .info h6,h4{
+    margin-bottom: 0.75rem;
+}
+
+.type-list{
+    display: flex;
+}
+
+.type{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    font-size: 0.625rem;
+    background: lightgrey;
+    text-transform: uppercase;
+}
+
+.fire{
+    background: var(--type-fire);
+    color: white;
+}
+
+.water{
+    background: var(--type-water);
+    color: black;
+}
+
+.electric{
+    background: var(--type-electric);
+    color: black;
+}
+
+.normal{
+    background: lightgray;
+    color: black;
+}
+
+.venom{
+    background: var(--type-venom);
+    color: yellow;
+}
+
+.flying{
+    background: skyblue;
+    color: white;
+}
 
 
 
