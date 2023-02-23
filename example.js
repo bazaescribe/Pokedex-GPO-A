@@ -3,24 +3,51 @@ function saludar() {
 }
 
 function sumar() {
-    var numA = 113;
-    var numB = 72;
+    var numA = 0;
+    var numB = 0;
+
+    numA = parseInt(document.getElementById("numeroA").value);
+    numB = parseInt(document.getElementById("numeroB").value);
 
     var resultado = numA + numB;
 
-    alert(resultado);
+    document.getElementById("result").innerHTML = resultado;
 }
 
 function restar(){
-    alert("Aqui vamos a restar");
+    var numA = 0;
+    var numB = 0;
+
+    numA = parseInt(document.getElementById("numeroA").value);
+    numB = parseInt(document.getElementById("numeroB").value);
+
+    var resultado = numA - numB;
+
+    document.getElementById("result").innerHTML = resultado;
 }
 
 function multiplicar(){
-    alert("Aqui vamos a multiplicar");
+    var numA = 0;
+    var numB = 0;
+
+    numA = parseInt(document.getElementById("numeroA").value);
+    numB = parseInt(document.getElementById("numeroB").value);
+
+    var resultado = numA * numB;
+
+    document.getElementById("result").innerHTML = resultado;
 }
 
 function dividir(){
-    alert("Aqui vamos a dividir");
+    var numA = 0;
+    var numB = 0;
+
+    numA = parseInt(document.getElementById("numeroA").value);
+    numB = parseInt(document.getElementById("numeroB").value);
+
+    var resultado = numA / numB;
+
+    document.getElementById("result").innerHTML = resultado;
 }
 
 function modulo() {
@@ -91,4 +118,83 @@ function checkINE() {
     }
 
     // refinar el algoritmo para que tome en cuenta mes y año
+}
+
+
+function bar(){
+    var name = "";
+    var birthYear = 0;
+    var birthMonth = 0;
+    var age = 0;
+    var message = "";
+
+    var today = new Date();
+    var currentMonth = today.getMonth() + 1;
+    var currentYear = today.getFullYear();
+    console.log("Mes de hoy: " + currentMonth);
+    console.log("Año actual: " + currentYear);
+
+    name = document.getElementById("campoNombre").value;
+    birthYear = document.getElementById("campoAnho").value;
+    birthMonth = document.getElementById("campoMes").value;
+
+    age = currentYear - birthYear;
+
+    if(currentMonth > birthMonth){
+        console.log("Ya paso");
+    } else {
+        console.log("Aún no pasa");
+        age = age - 1;
+    }
+
+    console.log(age);
+
+    if(age >= 18){
+        message = "Te damos la bienvenida " + name + " tu edad es " + age + " años, puedes pasar al bar 🍻.";
+    } else {
+        message = "Lo siento " + name + ", tienes " + age + " años. Aún no puedes pasar ❌." + "<div class='support'> <h3>Crees que hubo un error?</h3> <button>SOLICITAR AYUDA</button> </div>";
+    }
+
+    document.getElementById("message").innerHTML = message;
+}
+
+function cine() {
+    var tickets = 0;
+    var popcorn = 0;
+    var soda = 0;
+
+    var totalTickets = "";
+    var totalPopcorn = "";
+    var totalSoda = "";
+
+    var finalOrder = "";
+
+    tickets = document.getElementById("tickets").value;
+    popcorn = document.getElementById("popcorn").value;
+    soda = document.getElementById("soda").value;
+
+    console.log(tickets + popcorn + soda);
+
+    for(var i=0; i < tickets; i++){
+        totalTickets = totalTickets + "🎫 ";
+    }
+
+    for(var j=0; j < popcorn; j++){
+        totalPopcorn = totalPopcorn + "🍿 ";
+    }
+
+    for(var k=0; k < soda; k++){
+        totalSoda = totalSoda + "🥤 ";
+    }
+
+    finalOrder = totalTickets + totalPopcorn + totalSoda;
+
+    console.log(finalOrder);
+
+    document.getElementById("venta").innerHTML = "<h1>" +  finalOrder + "</h1>";
+
+    // Select dulces
+    // Mandar una alerta si compraste más de tres boletos: POCA DISPONIBILIDAD.
+    // Mandar un mensaje de promos si compraste menos refresco que palomitas.
+
 }

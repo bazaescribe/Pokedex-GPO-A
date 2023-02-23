@@ -1,6 +1,14 @@
 <html>
     <head>
         <script src="example.js"></script>
+
+        <style>
+            .support{
+                background-color: yellowgreen;
+                padding: 0.5rem;
+                font-family: sans-serif;
+            }
+        </style>
     </head>
     <body>
         <h2> 1. Ejemplos simples</h2>
@@ -8,19 +16,73 @@
 
         <h2> 2. Ejemplo del Bar</h2>
         <input type="text" placeholder="Introduce tu nombre" id="campoNombre">
-        <input type="text" placeholder="Introduce tu mes de nacimiento" id="campoMes">
         <input type="text" placeholder="Introduce tu año de nacimiento" id="campoAnho">
-        <button onclick="checkINE()">Ejecutar</button>
+        <select id="campoMes">
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+        <button onclick="bar()">Ejecutar</button>
+        <div id="message" style="background: yellow; padding: 1rem;"></div>
 
         <h2> 3. Ejemplo de Calculadora</h2>
-        <input type="text">
-        <input type="text">
-        <button>Sumar</button>
-        <button>Restar</button>
-        <button>Multiplicar</button>
-        <button>Dividir</button>
+        <input type="text" id="numeroA">
+        <input type="text" id="numeroB">
+        <button onclick="sumar()">Sumar</button>
+        <button onclick="restar()">Restar</button>
+        <button onclick="multiplicar()">Multiplicar</button>
+        <button onclick="dividir()">Dividir</button>
+        <div id="result" style="background: lightskyblue; padding: 1rem"></div>
 
-        <h2> 4. Ejemplo de libre de ciclos</h2>
+        <h2> 4. Taquilla</h2>
+
+        <select id="tickets">
+            <option value="1">1 boleto</option>
+            <option value="2">2 boletos</option>
+            <option value="3">3 boletos</option>
+            <option value="4">4 boletos</option>
+            <option value="5">5 boletos</option>
+            <option value="6">6 boletos</option>
+            <option value="7">7 boletos</option>
+            <option value="8">8 boletos</option>
+        </select>
+
+        <select id="popcorn">
+            <option value="0">Sin palomitas</option>
+            <option value="1">1 palomitas</option>
+            <option value="2">2 palomitas</option>
+            <option value="3">3 palomitas</option>
+            <option value="4">4 palomitas</option>
+            <option value="5">5 palomitas</option>
+            <option value="6">6 palomitas</option>
+            <option value="7">7 palomitas</option>
+            <option value="8">8 palomitas</option>
+        </select>
+
+        <select id="soda">
+            <option value="0">Sin refresco</option>
+            <option value="1">1 refresco</option>
+            <option value="2">2 refrescos</option>
+            <option value="3">3 refrescos</option>
+            <option value="4">4 refrescos</option>
+            <option value="5">5 refrescos</option>
+            <option value="6">6 refrescos</option>
+            <option value="7">7 refrescos</option>
+            <option value="8">8 refrescos</option>
+        </select>
+
+        <button onclick="cine()">Terminar compra</button>
+
+        <div id="venta"></div>
 
     </body>
 </html>
