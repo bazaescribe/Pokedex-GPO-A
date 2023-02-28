@@ -1,0 +1,24 @@
+#listaAmigos{
+    padding: 1rem;
+    background: pink;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.amigo{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background: white;
+    border-radius: 0.25rem;
+    font-family: sans-serif;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.16);
+}
+
+.amigo:hover{
+    box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.amigo h3{
+    margin: 0px;
+    margin-bottom: 0.4rem;
+}
