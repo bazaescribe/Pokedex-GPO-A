@@ -73,7 +73,7 @@ function agenda2(){
     var result = "";
 
     for(var i=0; i<amigos.length; i++){
-        constructorPersona +=    "<div class='amigo'>";
+        constructorPersona +=   "<div class='amigo'>";
         constructorPersona +=      "<h3>" + amigos[i].name + "</h3>";
         constructorPersona +=       "<br>";
         constructorPersona +=       amigos[i].phone;
