@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 .pokemon .photo img{
     height: 100%;
     position: relative;
-    top: -5rem;
+    /* top: -5rem; */
 }
 
 .action-bar{
@@ -178,34 +178,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fire{
-    background: var(--type-fire);
-    color: white;
+    background-color: #FF7337;
+    color: #0C0C0C;
 }
 
 .water{
-    background: var(--type-water);
-    color: black;
+    background-color: #0096C6;
+    color: #FFFFFF;
+}
+
+.grass{
+    background-color: var(--brand-secondary-200);
+    color: white;
 }
 
 .electric{
-    background: var(--type-electric);
-    color: black;
+    background-color: #F1FF53;
+    color: #0C0C0C;
 }
 
-.normal{
-    background: lightgray;
-    color: black;
+.poison{
+    background-color: #9c32ff;
+    color: white;
 }
 
-.venom{
-    background: var(--type-venom);
-    color: yellow;
+.bug{
+    background-color: #358c6b;
+    color: white;
 }
 
 .flying{
-    background: skyblue;
+    background-color: #a4e0f6;
+    color: black;
+}
+
+.ground{
+    background-color: #4b2807;
     color: white;
 }
+
+.normal{
+    background-color: #b0b0b0;
+    color: white;
+}
+
 
 
 
